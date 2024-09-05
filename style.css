@@ -26,14 +26,18 @@ body{
     font-weight: 700; /* Para hacer bold */
 }
 
+.carousel-item {
+  height: 100vh; /* Altura del carrusel igual a la altura visible de la pantalla */
+}
+
 .carousel-item img {
   height: 100vh;  /* Altura completa del viewport */
   width: 100vw;   /* Ancho completo del viewport */
   object-fit: cover; /* Para que la imagen no se deforme */
 }
 
-.carousel-container {
-  margin: auto; /* Centrar el carrusel */
+.container-prueba{
+  text-align: center;
 }
 
 .overlay-slider {
@@ -43,16 +47,25 @@ body{
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con 50% de opacidad */
-  }
-
-  .carousel-caption {
-    color: #fff; /* Color del texto en blanco */
-    text-align: left; /* Alinea el texto a la izquierda */
-    margin: 0; /* Elimina el margen por defecto */
 }
 
-.carousel-caption h3, .carousel-caption p {
-    margin: 0; /* Elimina los márgenes por defecto de los encabezados y párrafos */
+.carousel-caption {
+  color: #fff; /* Color del texto en blanco */
+  margin-bottom: 30px;
+}
+
+.carousel-caption h1{
+  font-size: 500%;
+  font-weight: bold;
+  text-align: left; /* Alinea el texto a la izquierda */
+  margin-bottom: 0%;
+}
+
+.carousel-caption p {
+  text-align: left; /* Alinea el texto a la izquierda */
+  font-size: 40px;  
+  font-weight: 100;
+  margin-bottom: 5%;  
 }
 
 .container-slider-pequeño{
@@ -60,3 +73,4 @@ body{
   width: 100vw;
   background-color: black;
 }
+
