@@ -60,3 +60,103 @@ body{
   width: 100vw;
   background-color: black;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Rectángulo negro */
+.ContenedorSLpeq-problema {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 20px;
+    height: 600px; /* Altura exacta */
+    margin-top: 0;
+    position: relative;
+}
+
+.left-text-box {
+    color: white;
+    width: 45%;
+    font-size: 1.2rem;
+}
+
+.right-slider {
+    width: 520px;
+    height: 520px;
+}
+
+.right-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Slider principal */
+.carousel-container {
+    margin: 0;
+}
+
+/* Reducir márgenes adicionales en el slider */
+.carousel-inner {
+    margin: 0;
+}
+
+/* Rectángulo Beneficios */
+.ContenedorBeneficios {
+    background-color: white;
+    height: 480px; /* Altura del rectángulo blanco */
+    width: 100%; /* Para que ocupe todo el ancho */
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Contenedor para las imágenes Beneficios */
+.ContainerImagBeneficios {
+    display: flex;
+    justify-content: space-between;
+    width: 91%; /* Ajuste para que no toque los bordes */
+    margin:  auto;
+    padding: 20px; /* Espacio interno alrededor del contenedor */
+}
+
+/* Estilos para los contenedores de las imágenes */
+.ContainerImagBeneficios > div {
+    flex: 1; /* Permite que cada contenedor se expanda uniformemente */
+    display: flex;
+    flex-direction: column; /* Coloca la imagen y el texto en columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+    margin: 0 100px; /* Espacio entre las imágenes */
+}
+
+/* Estilos para las imágenes */
+.ContainerImagBeneficios img {
+    max-width: 100%; /* Evita que la imagen exceda el contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Estilos para las frases debajo de las imágenes */
+.FraseBeneficios {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px; /* Espacio entre la imagen y el texto */
+    text-align: center; /* Centra el texto debajo de la imagen */
+    color: #0011A6;
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    font-weight: bold; /* Hace el texto en negritas */
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+
+/* Nuevo rectángulo negro */
+.ContenedorPlanes {
+    background-color: black;
+    height: 730px; /* Altura del rectángulo negro */
+    width: 100%;
+    position: relative;
+}
