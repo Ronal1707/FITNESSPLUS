@@ -1,3 +1,62 @@
-header-sin-cuenta{
-    display: flex;
+body{
+    background-color: black;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-sin-cuenta {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que quede por encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra si quieres */
+}
+  
+.imagen-logo-header{
+    padding-right: 30%;
+    padding-left: 2%;
+}
+
+.boton-header{
+    color: black;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-weight: 700; /* Para hacer bold */
+}
+
+.carousel-item img {
+  height: 100vh;  /* Altura completa del viewport */
+  width: 100vw;   /* Ancho completo del viewport */
+  object-fit: cover; /* Para que la imagen no se deforme */
+}
+
+.carousel-container {
+  margin: auto; /* Centrar el carrusel */
+}
+
+.overlay-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con 50% de opacidad */
+  }
+
+  .carousel-caption {
+    color: #fff; /* Color del texto en blanco */
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+.carousel-caption h3, .carousel-caption p {
+    margin: 0; /* Elimina los márgenes por defecto de los encabezados y párrafos */
+}
+
+.container-slider-pequeño{
+  height: 600px;
+  width: 100vw;
+  background-color: black;
 }
