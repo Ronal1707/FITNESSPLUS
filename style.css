@@ -108,7 +108,7 @@ body {
 .ContenedorBeneficios {
     background-color: white;
     height: 480px; /* Altura del rectángulo blanco */
-    width: 100%; /* Para que ocupe todo el ancho */
+    width: 100%; /* Para que ocupe el ancho */
     position: relative;
     display: flex;
     justify-content: space-around;
