@@ -51,8 +51,17 @@ body{
     margin: 0; /* Elimina el margen por defecto */
 }
 
-.carousel-caption h3, .carousel-caption p {
-    margin: 0; /* Elimina los márgenes por defecto de los encabezados y párrafos */
+.carousel-caption h1{
+  text-align: left;
+  font-size: 5vw;
+  font-weight: bolder;
+}
+
+.carousel-caption p {
+  text-align: left;
+  font-size: 2vw;
+  font-weight: 100;
+  padding-bottom: 10%;
 }
 
 .container-slider-pequeño{
@@ -61,20 +70,18 @@ body{
     background-color: black;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-}
 
 /* Rectángulo negro */
 .ContenedorSLpeq-problema {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: black;
     padding: 20px;
     height: 600px; /* Altura exacta */
     margin-top: 0;
     position: relative;
+    
 }
 
 .left-text-box {
