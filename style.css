@@ -103,7 +103,7 @@ body{
 }
 
 .carousel-item {
-    height: 100%; /* Asegura que cada slide ocupe todo el contenedor */
+    height: 100%; /* Asegura que cada slide ocupe el alto */
 }
 
 .right-slider img {
