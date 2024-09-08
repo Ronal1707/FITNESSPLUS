@@ -73,34 +73,85 @@ body{
 
 
 /* Rectángulo negro */
+/* Contenedor negro que contiene texto y un slider pequeño */
 .ContenedorSLpeq-problema {
     display: flex;
-    justify-content: space-between; /* Distribuye el texto y el slider */
-    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: space-between;
+    align-items: center;
     background-color: black;
-    padding: 20px;
+    padding: 10px;
     width: 100%;
-    height: 600px; /* Altura exacta */
+    height: 90vh; /* Ajuste con unidades relativas para que responda mejor */
     margin-top: 0;
     position: relative;
+    flex-wrap: wrap; /* Para que el contenido se acomode en pantallas pequeñas */
 }
 
+/* Caja de texto a la izquierda */
 .left-text-box {
     color: white;
     width: 45%;
-    font-size: 1.2rem;
-    margin-left: 40px; /* Añade un margen en el lado izquierdo */
+    text-align: justify;
+    font-size: 1.5vw; /* Ajuste del tamaño del texto */
+    margin-left: 2vw;
     font-family: 'Poppins', sans-serif;
 }
 
+/* Slider pequeño a la derecha */
 .right-slider {
-    width: 520px;
-    height: 520px;
+    width: 40vw; /* Ajuste del ancho relativo al viewport */
+    height: 40vw; /* Ajuste del alto relativo */
     display: flex;
     align-items: center;
-    border-radius: 20px; /* Redondea las esquinas del slider */
-    overflow: hidden; /* Asegura que las imágenes se ajusten dentro del contenedor redondeado */
+    overflow: hidden;
+    margin: 20px 0; /* Espaciado para pantallas más pequeñas */
 }
+
+/* Las imágenes dentro del slider se ajustarán */
+.right-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .ContenedorSLpeq-problema {
+        flex-direction: column; /* Cambiar a columna para pantallas pequeñas */
+        align-items: center; /* Centrar el contenido horizontalmente */
+        justify-content: center; /* Centrar el contenido verticalmente */
+        height: auto; /* Elimina la altura fija */
+    }
+
+    .left-text-box {
+        width: 100%;
+        font-size: 3.5vw; /* Aumentar tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centrar el texto */
+        margin-left: 0; /* Elimina el margen */
+    }
+
+    .right-slider {
+        width: 90%; /* Se ajusta el ancho */
+        height: auto; /* Altura automática */
+        margin-top: 20px; /* Añade espacio arriba */
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas (teléfonos móviles) */
+@media (max-width: 480px) {
+    .left-text-box {
+        font-size: 4.5vw; /* Aumentar aún más el tamaño del texto */
+        text-align: center; /* Centrar el texto */
+    }
+}
+
+
+
+
+/*revision de display responsive ESTA BIEN POR AHORA*/
+
+
+
 
 .carousel-item {
     height: 100%; /* Asegura que cada slide ocupe el alto */
@@ -125,54 +176,93 @@ body{
     margin: 0;
 }
 
+
+
+
+
+
+
 /* Rectángulo Beneficios */
 .ContenedorBeneficios {
     background-color: white;
-    height: 560px; /* Altura del rectángulo blanco */
-    width: 100%; /* Para que ocupe el ancho */
+    height: auto; /* Se adapta al contenido */
+    width: 100%; /* Asegura que ocupe el ancho completo */
     position: relative;
     display: flex;
-    justify-content: space-around;
+    flex-direction: row; /* Alinea los elementos horizontalmente en pantallas grandes */
+    justify-content: center; /* Centra el contenido horizontalmente */
     align-items: center;
-    flex-direction: column;
-    margin-top: 25px;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    padding: 20px; /* Espaciado alrededor del contenido */
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el tamaño total */
 }
 
 /* Contenedor para las imágenes Beneficios */
 .ContainerImagBeneficios {
     display: flex;
-    justify-content: space-between;
-    width: 91%; /* Ajuste para que no toque los bordes */
-    margin:  auto;
-    padding: 20px; /* Espacio interno alrededor del contenedor */
+    flex-direction: row; /* Alinea las imágenes horizontalmente en pantallas grandes */
+    justify-content: space-around; /* Espacio igual entre los elementos */
+    align-items: center; /* Centra verticalmente las imágenes */
+    width: 100%; /* Asegura que ocupe el ancho completo */
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el tamaño total */
 }
 
 /* Estilos para los contenedores de las imágenes */
 .ContainerImagBeneficios > div {
-    flex: 1; /* Permite que cada contenedor se expanda uniformemente */
     display: flex;
-    flex-direction: column; /* Coloca la imagen y el texto en columna */
+    flex-direction: column; /* Alinea la imagen y la frase verticalmente */
     align-items: center; /* Centra el contenido horizontalmente */
-    margin: 0 100px; /* Espacio entre las imágenes */
+    width: 220px; /* Tamaño fijo para los contenedores de las imágenes */
+    height: auto; /* Se adapta al contenido */
 }
 
 /* Estilos para las imágenes */
 .ContainerImagBeneficios img {
-    max-width: 100%; /* Evita que la imagen exceda el contenedor */
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+    max-height: 250px; /* Tamaño máximo de la imagen para mantener el diseño consistente */
     height: auto; /* Mantiene la proporción de la imagen */
 }
 
 /* Estilos para las frases debajo de las imágenes */
 .FraseBeneficios {
     font-family: 'Poppins', sans-serif;
-    margin-top: 20px; /* Espacio entre la imagen y el texto */
+    margin-top: 10px; /* Espaciado entre la imagen y la frase */
     text-align: center; /* Centra el texto debajo de la imagen */
     color: #0011A6;
     text-transform: uppercase; /* Convierte el texto a mayúsculas */
-    font-weight: bold; /* Hace el texto en negritas */
-    font-size: 24px;
+    font-weight: bold; /* Texto en negritas */
+    font-size: 21px; /* Tamaño de la fuente */
     line-height: 1.2;
 }
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .ContenedorBeneficios {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        flex-direction: column; /* Apila los elementos verticalmente en pantallas pequeñas */
+        padding: 20px; /* Reduce el padding para pantallas más pequeñas */
+    }
+
+    .ContainerImagBeneficios {
+        flex-direction: column; /* Apila las imágenes verticalmente en pantallas pequeñas */
+    }
+
+    .ContainerImagBeneficios > div {
+        width: 100px; /* Tamaño más pequeño para pantallas pequeñas */
+    }
+
+    .FraseBeneficios {
+        font-size: 16px; /* Tamaño de la fuente ajustado para pantallas pequeñas */
+        margin-bottom: 35px; /* Ajusta el valor según el espacio deseado */
+    }
+}
+
+
+
+/*revision display responsivo*/
+
 
 
 /* Nuevo rectángulo negro */
@@ -183,6 +273,9 @@ body{
     position: relative;
     padding: 10px; /* Espacio interno del contenedor */
     box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
 }
 
 .titulo {
@@ -195,7 +288,7 @@ body{
 .tarjetas-container {
     display: flex;
     justify-content: center; /* Centra el contenedor de tarjetas horizontalmente */
-    margin-bottom: 40px; /* Espacio debajo del contenedor de tarjetas */
+    width: 100%;
 }
 
 .tarjetas {
@@ -216,7 +309,7 @@ body{
 }
 
 .contenedorbotoncomprar {
-    width: 99%; /* Asegura que el contenedor del botón ocupe el ancho*/
+    width: 100%;
     display: flex;
     justify-content: center; /* Centra el botón horizontalmente */
     position: absolute; /* Posiciona el contenedor del botón de manera absoluta dentro del contenedor principal */
@@ -239,3 +332,37 @@ body{
     background-color: #EB00FF; /* Fondo del botón al pasar el ratón */
     border-color: black; /* Borde del botón al pasar el ratón */
 }
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .ContenedorPlanes {
+        height: auto; /* Ajusta la altura para pantallas pequeñas */
+        padding: 20px; /* Aumenta el padding para pantallas pequeñas */
+    }
+
+    /* Consulta de medios para pantallas pequeñas */
+    @media (max-width: 768px) {
+        .tarjetas-container {
+            display: flex;
+            flex-direction: column; /* Cambia la dirección a columna para apilar las tarjetas verticalmente */
+            align-items: center; /* Centra el contenedor de tarjetas horizontalmente */
+            justify-content: center; /* Centra el contenedor de tarjetas verticalmente */
+            height: 100%; /* Asegura que el contenedor de tarjetas ocupe el 100% de la altura disponible */
+            gap: 20px; /* Espacio entre las tarjetas */
+        }
+
+        .tarjetas {
+            display: flex;
+            flex-direction: column; /* Apila las tarjetas verticalmente */
+            align-items: center; /* Centra las tarjetas horizontalmente dentro de su contenedor */
+            gap: 20px; /* Espacio entre las tarjetas */
+        }
+    }
+
+
+    .contenedorbotoncomprar {
+        position: static; /* Elimina la posición absoluta en pantallas pequeñas */
+        margin-top: 20px; /* Añade espacio superior */
+    }
+}
+
