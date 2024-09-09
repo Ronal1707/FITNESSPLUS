@@ -239,3 +239,74 @@ body{
     background-color: #EB00FF; /* Fondo del botón al pasar el ratón */
     border-color: black; /* Borde del botón al pasar el ratón */
 }
+
+.contenedorPreguntas {
+    width: 100%;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tituloPreguntas {
+    color: black;
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 2rem;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.desplegable {
+    width: 100%;
+    text-align: center;
+}
+
+.footer{
+    display: flex;
+    background-color: black;
+    width: 100%;
+    height: 280px;
+}
+
+.opciones-footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    margin: 1.5rem;
+}
+
+.footer-opcion {
+    width: 20%;
+    margin: 1rem;
+    text-align: left;
+}
+
+.lista-redes {
+    padding-left: 0;
+}
+
+.lista-enlaces  {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+}
+
+#preguntas_frec {
+    width: 55%;
+    background-color: black; /* Fondo del botón */
+    color: white; /* Color de la fuente del botón */
+    border: 2px solid #EB00FF; /* Borde del botón */
+    border-radius: 10px; /* Bordes redondeados del botón */
+    padding: 10px 20px; /* Espacio interno del botón */
+    font-size: 1.1rem; /* Tamaño del texto del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    outline: none; /* Elimina el borde de enfoque por defecto */
+    transition: background-color 0.3s, border-color 0.3s; /* Transiciones para efectos de hover */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
