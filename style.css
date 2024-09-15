@@ -71,49 +71,64 @@ body{
     background-color: black;
 }
 
-
-/* Rectángulo negro */
+/* CONTENEDOR SECCION PROBLEMA Y SOLUCION - SLIDER PEQUEÑO */
 .ContenedorSLpeq-problema {
-    display: flex;
-    justify-content: space-between; /* Distribuye el texto y el slider */
-    align-items: center; /* Centra verticalmente el contenido */
     background-color: black;
     padding: 20px;
     width: 100%;
-    height: 600px; /* Altura exacta */
+    min-height: 400px; /* Altura mínima para que se ajuste mejor a diferentes tamaños de pantalla */
     margin-top: 0;
     position: relative;
 }
 
 .left-text-box {
     color: white;
-    width: 45%;
     font-size: 1.2rem;
-    margin-left: 40px; /* Añade un margen en el lado izquierdo */
     font-family: 'Poppins', sans-serif;
+    padding-right: 20px; /* Añade un padding a la derecha para separación con el slider */
+    text-align: justify;
 }
 
+/* Ajuste para el slider */
 .right-slider {
-    width: 520px;
-    height: 520px;
-    display: flex;
-    align-items: center;
     border-radius: 20px; /* Redondea las esquinas del slider */
     overflow: hidden; /* Asegura que las imágenes se ajusten dentro del contenedor redondeado */
 }
 
+/* Asegura que cada slide ocupe el alto completo del slider */
 .carousel-item {
-    height: 100%; /* Asegura que cada slide ocupe el alto */
+    height: 100%; /* Alto de la imagen*/
 }
 
+/* Ajusta las imágenes del slider para que no se deformen */
 .right-slider img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajusta la imagen para que no se deforme */
+    object-fit: cover; /* Ajusta la imagen */
 }
 
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 992px) {
+    .ContenedorSLpeq-problema {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center; /* Centra el texto en pantallas más pequeñas */
+        min-height: auto; /* Auto ajuste de altura */
+    }
 
+    .left-text-box {
+        width: 100%;
+        padding-right: 0; /* Quita el padding a la derecha en pantallas más pequeñas */
+        margin-bottom: 20px; /* Margen inferior */
+        text-align: justify;
+    }
 
+    .right-slider {
+        width: 100%;
+        height: auto;
+        max-width: 100%; /* Ancho del slider*/
+    }
+}
 
 /* Slider principal */
 .carousel-container {
@@ -125,82 +140,105 @@ body{
     margin: 0;
 }
 
-/* Rectángulo Beneficios */
+/* CONTENEDOR BLANCO SECCION BENEFICIOS*/
 .ContenedorBeneficios {
     background-color: white;
-    height: 560px; /* Altura del rectángulo blanco */
-    width: 100%; /* Para que ocupe el ancho */
+    width: 100%;
     position: relative;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
+    justify-content: center; /* Centra el contenedor de imágenes */
+    padding: 80px;
     margin-top: 25px;
 }
 
-/* Contenedor para las imágenes Beneficios */
+/* CONTENEDOR ICONOS Y FRASES */
 .ContainerImagBeneficios {
     display: flex;
-    justify-content: space-between;
-    width: 91%; /* Ajuste para que no toque los bordes */
-    margin:  auto;
-    padding: 20px; /* Espacio interno alrededor del contenedor */
+    justify-content: space-around;
+    width: 100%; /* Ajusta el ancho para pantallas pequeñas */
+    max-width: 1200px; /* Ancho máximo para grandes pantallas */
+    margin: auto;
+    gap: 20px; /* Espacio entre las imágenes */
 }
 
-/* Estilos para los contenedores de las imágenes */
+/* ESTILO DEL CONTENEDOR DE ICONOS */
 .ContainerImagBeneficios > div {
-    flex: 1; /* Permite que cada contenedor se expanda uniformemente */
+    flex: 1;
     display: flex;
-    flex-direction: column; /* Coloca la imagen y el texto en columna */
-    align-items: center; /* Centra el contenido horizontalmente */
-    margin: 0 100px; /* Espacio entre las imágenes */
+    flex-direction: column;
+    align-items: center;
+    padding: 10px; /* Añade padding interno */
 }
 
-/* Estilos para las imágenes */
+/* ESTILO ICONOS BENEFICIOS */
 .ContainerImagBeneficios img {
     max-width: 100%; /* Evita que la imagen exceda el contenedor */
     height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 150px; /* Limita la altura máxima de la imagen */
 }
 
-/* Estilos para las frases debajo de las imágenes */
+/* FRASES SECCION BENEFICIOS */
 .FraseBeneficios {
     font-family: 'Poppins', sans-serif;
-    margin-top: 20px; /* Espacio entre la imagen y el texto */
+    margin-top: 10px; /* Espacio entre la imagen y el texto */
     text-align: center; /* Centra el texto debajo de la imagen */
     color: #0011A6;
     text-transform: uppercase; /* Convierte el texto a mayúsculas */
     font-weight: bold; /* Hace el texto en negritas */
-    font-size: 24px;
+    font-size: 20px; /* Tamaño de fuente ajustado para pantallas pequeñas */
     line-height: 1.2;
 }
 
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .ContainerImagBeneficios {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Reduce el espacio entre los elementos en pantallas más pequeñas */
+    }
 
-/* Nuevo rectángulo negro */
-.ContenedorPlanes {
-    background-color: black;
-    height: 750px; /* Altura del rectángulo negro */
-    width: 100%;
-    position: relative;
-    padding: 10px; /* Espacio interno del contenedor */
-    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+    .ContainerImagBeneficios > div {
+        margin: 0; /* Quita el margen en pantallas pequeñas */
+        width: 80%; /* Asegura que los ítems no se expandan demasiado */
+    }
+
+    .FraseBeneficios {
+        font-size: 16px; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+    }
 }
 
-.titulo {
+/*CONTENEDOR TARJETAS PLANES*/
+.ContenedorPlanes {
+    background-color: black;
+    padding: 20px; /* Espacio interno del contenedor */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    width: 100%; /* Ocupa el ancho total */
+    min-height: 750px; /* Altura mínima */
+}
+
+/* Título PLANES */
+.tituloPlanes {
     color: #EB00FF; /* Color del título */
     text-align: center; /* Centra el título horizontalmente */
     margin-bottom: 20px; /* Espacio debajo del título */
-    font-size: 80px;
+    font-size: 5rem; /* Tamaño del texto */
 }
 
+/* Contenedor de tarjetas PLANES */
 .tarjetas-container {
     display: flex;
-    justify-content: center; /* Centra el contenedor de tarjetas horizontalmente */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en pantallas más pequeñas */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    gap: 20px; /* Espacio entre las tarjetas */
     margin-bottom: 40px; /* Espacio debajo del contenedor de tarjetas */
 }
 
+/* Tarjetas PLANES*/
 .tarjetas {
     display: flex;
-    gap: 140px; /* Espacio fijo de 140 píxeles entre las tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en pantallas más pequeñas */
+    gap: 40px; /* Espacio entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
 }
 
 .tarjeta {
@@ -215,12 +253,12 @@ body{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para las tarjetas */
 }
 
+/* Botón de compra (INICAR SESIÓN PARA COMPRAR) */
 .contenedorbotoncomprar {
-    width: 99%; /* Asegura que el contenedor del botón ocupe el ancho*/
     display: flex;
     justify-content: center; /* Centra el botón horizontalmente */
-    position: absolute; /* Posiciona el contenedor del botón de manera absoluta dentro del contenedor principal */
-    bottom: 45px; /* Espacio desde el borde inferior del contenedor principal */
+    margin-top: 55px; /* Espacio encima del botón */
+    margin-bottom: 40px;
 }
 
 .botoncomprar {
@@ -232,10 +270,86 @@ body{
     font-size: 1rem; /* Tamaño del texto del botón */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     outline: none; /* Elimina el borde de enfoque por defecto */
-    transition: background-color 0.3s, border-color 0.3s; /* Transiciones para efectos de hover */
+    transition: background-color 0.3s, border-color 0.3s; /* Transiciones para color */
 }
 
 .botoncomprar:hover {
     background-color: #EB00FF; /* Fondo del botón al pasar el ratón */
     border-color: black; /* Borde del botón al pasar el ratón */
+}
+
+
+
+
+
+
+.contenedorPreguntas {
+    width: 100%;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tituloPreguntas {
+    color: black;
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 2rem;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.desplegable {
+    width: 100%;
+    text-align: center;
+}
+
+.footer{
+    display: flex;
+    background-color: black;
+    width: 100%;
+    height: 280px;
+}
+
+.opciones-footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    margin: 1.5rem;
+}
+
+.footer-opcion {
+    width: 20%;
+    margin: 1rem;
+    text-align: left;
+}
+
+.lista-redes {
+    padding-left: 0;
+}
+
+.lista-enlaces  {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+}
+
+#preguntas_frec {
+    width: 55%;
+    background-color: black; /* Fondo del botón */
+    color: white; /* Color de la fuente del botón */
+    border: 2px solid #EB00FF; /* Borde del botón */
+    border-radius: 10px; /* Bordes redondeados del botón */
+    padding: 10px 20px; /* Espacio interno del botón */
+    font-size: 1.1rem; /* Tamaño del texto del botón */
+    cursor: pointer; /* Cambia el colr al pasar el cursor sobre el botón */
+    outline: none; /* Elimina el borde de enfoque por defecto */
+    transition: background-color 0.3s, border-color 0.3s; /* Transiciones para color*/
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
 }
