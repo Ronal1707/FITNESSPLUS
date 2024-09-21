@@ -1,0 +1,171 @@
+﻿.header-sin-cuenta {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que quede por encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra si quieres */
+}
+
+.imagen-logo-header{
+    padding-right: 30%;
+    padding-left: 2%;
+}
+
+.boton-header{
+    color: black;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-weight: 700; /* Para hacer bold */
+}
+
+/* SECCION EJERCICIOS */
+.ContenedorEjercicios {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 20px;
+}
+
+.tarjetaEj {
+    display: flex;
+    background-color: white;
+    color: black;
+    width: 1100px;
+    height: 210px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.tarjeta-imagen {
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tarjeta-contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    width: 60%;
+}
+
+.tarjeta-contenido h2 {
+    font-size: 3em;
+    margin: 0;
+    font-weight: bold;
+}
+
+.cta {
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex; /* Alinea texto y flecha en línea */
+    align-items: center; /* Alinea verticalmente */
+}
+
+.cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: 10px; /* Espacio entre el texto y la flecha */
+    text-transform: uppercase;
+}
+
+.cta svg {
+    transform: translate(-8px, -2px);
+    transition: all 0.3s ease, transform 0.3s ease; /* Añadir transición para la rotación */
+    vertical-align: middle;
+}
+
+.cta:hover svg {
+    transform: translateX(0) rotate(90deg); /* Rota 90 grados hacia abajo */
+    transition: all 0.3s ease, transform 0.3s ease;
+}
+
+.cta:active {
+    transform: scale(0.95) translateY(2px); /* Reduce el tamaño y mueve el botón hacia abajo */
+}
+
+.hover-underline-animation {
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+
+/*CONTENEDOR TARJETAS PLANES*/
+.ContenedorPlanes {
+    background-color: white;
+    padding: 20px; /* Espacio interno del contenedor */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    width: 100%; /* Ocupa el ancho total */
+    min-height: 750px; /* Altura mínima */
+}
+
+/* Título PLANES */
+.tituloPlanes {
+    color: black; /* Color del título */
+    text-align: center; /* Centra el título horizontalmente */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    font-size: 5rem; /* Tamaño del texto */
+}
+
+/* Contenedor de tarjetas PLANES */
+.tarjetas-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en pantallas más pequeñas */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    gap: 20px; /* Espacio entre las tarjetas */
+    margin-bottom: 40px; /* Espacio debajo del contenedor de tarjetas */
+}
+
+/* Tarjetas PLANES*/
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en pantallas más pequeñas */
+    gap: 40px; /* Espacio entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+}
+
+.tarjeta {
+    background-color: white;
+    color: black;
+    width: 300px; /* Ancho de cada tarjeta */
+    height: 490px; /* Alto de cada tarjeta */
+    border-radius: 15px; /* Bordes redondeados de las tarjetas */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido dentro de la tarjeta */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para las tarjetas */
+    border: 3px solid #EB00FF; /* Borde de color azul y grosor de 2px */
+}
