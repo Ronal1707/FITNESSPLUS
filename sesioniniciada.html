@@ -45,7 +45,10 @@
         <img src="imagenes/IMG%20PRESS%20BANCA.jpg" alt="Press Banca" class="tarjeta-imagen">
         <div class="tarjeta-contenido">
             <h2>PRESS BANCA</h2>
-            <button class="cta">
+            <div class="extra-info">
+                <p>Descripción detallada del ejercicio Press Banca. Incluye beneficios, músculos trabajados, y consejos.</p>
+            </div>
+            <button class="cta" onclick="toggleInfo(this)">
                 <span class="hover-underline-animation">VER MÁS</span>
                 <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="20" height="8" viewBox="0 0 46 16">
                     <path id="Path_10" data-name="Path 10" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(30)" stroke="black" stroke-width="3"></path>
@@ -53,12 +56,17 @@
             </button>
         </div>
     </div>
+
+
 
     <div class="tarjetaEj">
         <img src="imagenes/IMG%20SQUAT.jpg" alt="Sentadilla" class="tarjeta-imagen">
         <div class="tarjeta-contenido">
             <h2>SENTADILLA</h2>
-            <button class="cta">
+            <div class="extra-info">
+                <p>Descripción detallada del ejercicio Press Banca. Incluye beneficios, músculos trabajados, y consejos.</p>
+            </div>
+            <button class="cta" onclick="toggleInfo(this)">
                 <span class="hover-underline-animation">VER MÁS</span>
                 <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="20" height="8" viewBox="0 0 46 16">
                     <path id="Path_10" data-name="Path 10" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(30)" stroke="black" stroke-width="3"></path>
@@ -66,12 +74,17 @@
             </button>
         </div>
     </div>
+
+    
 
     <div class="tarjetaEj">
         <img src="imagenes/IMG%20DOMINADAS%202.webp" alt="Dominada" class="tarjeta-imagen">
         <div class="tarjeta-contenido">
             <h2>DOMINADA</h2>
-            <button class="cta">
+            <div class="extra-info">
+                <p>Descripción detallada del ejercicio Press Banca. Incluye beneficios, músculos trabajados, y consejos.</p>
+            </div>
+            <button class="cta" onclick="toggleInfo(this)">
                 <span class="hover-underline-animation">VER MÁS</span>
                 <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="20" height="8" viewBox="0 0 46 16">
                     <path id="Path_10" data-name="Path 10" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(30)" stroke="black" stroke-width="3"></path>
@@ -79,17 +92,17 @@
             </button>
         </div>
     </div>
+
+    <div class="contenedorbotonMasEj">
+        <button class="botonMasEj">MÁS EJERCICIOS</button>
+    </div>
 </div>
 
 
 
-<script>
-    function rotateArrow(event) {
-        event.preventDefault(); // Evita el comportamiento por defecto del enlace
-        const flecha = event.currentTarget; // Obtiene la flecha que fue clickeada
-        flecha.classList.toggle('rotada'); // Alterna la clase que aplica la rotación
-    }
-</script>
+
+
+
 
 
 
@@ -106,6 +119,66 @@
     </div>
 </div>
 
+
+<!-- DESPLEGABLE PREGUNTAS -->
+
+<div class = "contenedorPreguntas" >
+    <h2 class = "tituloPreguntas">¿TIENES ALGUNA PREGUNTA?</h2>
+    <div class="desplegable">
+        <label for="preguntas_frec"></label>
+        <select name="Preguntas" id="preguntas_frec">
+            <option value="ubicaciones">¿Donde los puedo ubicar?</option>
+            <option value="Cobros">¿Tienen cobros adicionales?</option>
+            <option value="Horarios">¿En que horarios puedo entrenar?</option>
+        </select>
+    </div>
+</div>
+<div class="footer">
+    <section class="opciones-footer">
+        <div class="footer-opcion">
+            <h3 class="subtitulo_footer">FitnessPlus</h3>
+            <p class="parrafo_footer">texto footer</p>
+        </div>
+        <div class="footer-opcion">
+            <h3 class="subtitulo_footer">Redes</h3>
+            <ul class="lista-redes">
+                <il>Intagram</il>
+                <il>x</il>
+                <il>Facebook</il>
+                <il>Tiktok</il>
+            </ul>
+        </div>
+        <div class="footer-opcion">
+            <h3 class="subtitulofooter">Enlaces</h3>
+            <ul class = "lista-enlaces">
+                <il>Inicio</il>
+                <il>nosotros</il>
+                <il>contacto</il>
+            </ul>
+        </div>
+    </section>
+</div>
+
+
+
+<script>
+    function toggleInfo(button) {
+        const tarjeta = button.closest('.tarjetaEj'); // Encuentra la tarjeta actual
+        tarjeta.classList.toggle('expandida'); // Alterna la clase para expandir/contraer la tarjeta
+
+        // Alterna el texto del botón
+        const texto = button.querySelector('.hover-underline-animation');
+        texto.textContent = tarjeta.classList.contains('expandida') ? 'VER MENOS' : 'VER MÁS';
+
+        // Alterna la rotación de la flecha
+        const flecha = button.querySelector('svg');
+        if (tarjeta.classList.contains('expandida')) {
+            flecha.style.transform = 'rotate(-90deg)'; // Flecha hacia arriba
+        } else {
+            flecha.style.transform = 'rotate(0deg)'; // Flecha hacia abajo
+        }
+    }
+</script>
 
 </body>
 </html>
