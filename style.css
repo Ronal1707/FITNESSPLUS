@@ -72,6 +72,32 @@ body{
 }
 
 
+/* CONTENEDOR SECCION PROBLEMA Y SOLUCION - SLIDER PEQUEÑO */
+.ContenedorSLpeq-problema {
+    background-color: black;
+    padding: 20px;
+    width: 100%;
+    min-height: 400px; /* Altura mínima para que se ajuste mejor a diferentes tamaños de pantalla */
+    margin-top: 0;
+    position: relative;
+}
+
+
+.left-text-box {
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    padding-right: 20px; /* Añade un padding a la derecha para separación con el slider */
+    text-align: justify;
+}
+
+/* Ajuste para el slider */
+.right-slider {
+    border-radius: 20px; /* Redondea las esquinas del slider */
+    overflow: hidden; /* Asegura que las imágenes se ajusten dentro del contenedor redondeado */
+}
+
+
 .carousel-item {
     height: 100%; /* Alto de la imagen*/
 }
