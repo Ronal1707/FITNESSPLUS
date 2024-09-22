@@ -3,7 +3,6 @@ body{
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
-
 .header-sin-cuenta {
     background-color: white;
     position: fixed;
@@ -72,6 +71,8 @@ body{
 }
 
 
+/* CONTENEDOR SECCION PROBLEMA Y SOLUCION - SLIDER PEQUEÑO */
+.ContenedorSLpeq-problema {
 /* Rectángulo negro */
 /* Contenedor negro que contiene texto y un slider pequeño */
 .ContenedorSLpeq-problema {
@@ -81,12 +82,16 @@ body{
     background-color: black;
     padding: 10px;
     width: 100%;
+    min-height: 400px; /* Altura mínima para que se ajuste mejor a diferentes tamaños de pantalla */
     height: 90vh; /* Ajuste con unidades relativas para que responda mejor */
     margin-top: 0;
     position: relative;
     flex-wrap: wrap; /* Para que el contenido se acomode en pantallas pequeñas */
 }
 
+.left-text-box {
+    color: white;
+    font-size: 1.2rem;
 /* Caja de texto a la izquierda */
 .left-text-box {
     color: white;
@@ -95,8 +100,15 @@ body{
     font-size: 1.5vw; /* Ajuste del tamaño del texto */
     margin-left: 2vw;
     font-family: 'Poppins', sans-serif;
+    padding-right: 20px; /* Añade un padding a la derecha para separación con el slider */
+    text-align: justify;
 }
 
+/* Ajuste para el slider */
+.right-slider {
+    border-radius: 20px; /* Redondea las esquinas del slider */
+    overflow: hidden; /* Asegura que las imágenes se ajusten dentro del contenedor redondeado */
+}
 /* Slider pequeño a la derecha */
 .right-slider {
     width: 40vw; /* Ajuste del ancho relativo al viewport */
@@ -144,27 +156,38 @@ body{
         text-align: center; /* Centrar el texto */
     }
 }
-
-
-
-
 /*revision de display responsive ESTA BIEN POR AHORA*/
-
-
-
-
 .carousel-item {
-    height: 100%; /* Asegura que cada slide ocupe el alto */
+    height: 100%; /* Alto de la imagen*/
 }
-
+/* Ajusta las imágenes del slider para que no se deformen */
 .right-slider img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajusta la imagen para que no se deforme */
+    object-fit: cover; /* Ajusta la imagen */
 }
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 992px) {
+    .ContenedorSLpeq-problema {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center; /* Centra el texto en pantallas más pequeñas */
+        min-height: auto; /* Auto ajuste de altura */
+    }
 
+    .left-text-box {
+        width: 100%;
+        padding-right: 0; /* Quita el padding a la derecha en pantallas más pequeñas */
+        margin-bottom: 20px; /* Margen inferior */
+        text-align: justify;
+    }
 
-
+    .right-slider {
+        width: 100%;
+        height: auto;
+        max-width: 100%; /* Ancho del slider*/
+    }
+}
 
 /* Slider principal */
 .carousel-container {
@@ -176,12 +199,15 @@ body{
     margin: 0;
 }
 
-
-
-
-
-
-
+/* CONTENEDOR BLANCO SECCION BENEFICIOS*/
+.ContenedorBeneficios {
+    background-color: white;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centra el contenedor de imágenes */
+    padding: 80px;
+    margin-top: 25px;
 /* Rectángulo Beneficios */
 .ContenedorBeneficios {
     background-color: white;
@@ -198,9 +224,14 @@ body{
     box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el tamaño total */
 }
 
-/* Contenedor para las imágenes Beneficios */
+/* CONTENEDOR ICONOS Y FRASES */
 .ContainerImagBeneficios {
     display: flex;
+    justify-content: space-around;
+    width: 100%; /* Ajusta el ancho para pantallas pequeñas */
+    max-width: 1200px; /* Ancho máximo para grandes pantallas */
+    margin: auto;
+    gap: 20px; /* Espacio entre las imágenes */
     flex-direction: row; /* Alinea las imágenes horizontalmente en pantallas grandes */
     justify-content: space-around; /* Espacio igual entre los elementos */
     align-items: center; /* Centra verticalmente las imágenes */
@@ -208,8 +239,13 @@ body{
     box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el tamaño total */
 }
 
-/* Estilos para los contenedores de las imágenes */
+/* ESTILO DEL CONTENEDOR DE ICONOS */
 .ContainerImagBeneficios > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px; /* Añade padding interno */
     display: flex;
     flex-direction: column; /* Alinea la imagen y la frase verticalmente */
     align-items: center; /* Centra el contenido horizontalmente */
@@ -217,16 +253,43 @@ body{
     height: auto; /* Se adapta al contenido */
 }
 
-/* Estilos para las imágenes */
+/* ESTILO ICONOS BENEFICIOS */
 .ContainerImagBeneficios img {
     max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
     max-height: 250px; /* Tamaño máximo de la imagen para mantener el diseño consistente */
     height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 150px; /* Limita la altura máxima de la imagen */
 }
 
-/* Estilos para las frases debajo de las imágenes */
+/* FRASES SECCION BENEFICIOS */
 .FraseBeneficios {
     font-family: 'Poppins', sans-serif;
+    margin-top: 10px; /* Espacio entre la imagen y el texto */
+    text-align: center; /* Centra el texto debajo de la imagen */
+    color: #0011A6;
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    font-weight: bold; /* Hace el texto en negritas */
+    font-size: 20px; /* Tamaño de fuente ajustado para pantallas pequeñas */
+    line-height: 1.2;
+}
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .ContainerImagBeneficios {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Reduce el espacio entre los elementos en pantallas más pequeñas */
+    }
+
+    .ContainerImagBeneficios > div {
+        margin: 0; /* Quita el margen en pantallas pequeñas */
+        width: 80%; /* Asegura que los ítems no se expandan demasiado */
+    }
+
+    .FraseBeneficios {
+        font-size: 16px; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+    }
+}
     margin-top: 10px; /* Espaciado entre la imagen y la frase */
     text-align: center; /* Centra el texto debajo de la imagen */
     color: #0011A6;
@@ -258,16 +321,14 @@ body{
         margin-bottom: 35px; /* Ajusta el valor según el espacio deseado */
     }
 }
-
-
-
 /*revision display responsivo*/
-
-
-
-/* Nuevo rectángulo negro */
+/*CONTENEDOR TARJETAS PLANES*/
 .ContenedorPlanes {
     background-color: black;
+    padding: 20px; /* Espacio interno del contenedor */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    width: 100%; /* Ocupa el ancho total */
+    min-height: 750px; /* Altura mínima */
     height: 750px; /* Altura del rectángulo negro */
     width: 100%;
     position: relative;
@@ -278,22 +339,31 @@ body{
     align-items: center; /* Centra el contenido horizontalmente */
 }
 
-.titulo {
+/* Título PLANES */
+.tituloPlanes {
     color: #EB00FF; /* Color del título */
     text-align: center; /* Centra el título horizontalmente */
     margin-bottom: 20px; /* Espacio debajo del título */
-    font-size: 80px;
+    font-size: 5rem; /* Tamaño del texto */
 }
 
+/* Contenedor de tarjetas PLANES */
 .tarjetas-container {
     display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en pantallas más pequeñas */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    gap: 20px; /* Espacio entre las tarjetas */
+    margin-bottom: 40px; /* Espacio debajo del contenedor de tarjetas */
     justify-content: center; /* Centra el contenedor de tarjetas horizontalmente */
     width: 100%;
 }
 
+/* Tarjetas PLANES*/
 .tarjetas {
     display: flex;
-    gap: 140px; /* Espacio fijo de 140 píxeles entre las tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en pantallas más pequeñas */
+    gap: 40px; /* Espacio entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
 }
 
 .tarjeta {
@@ -308,12 +378,13 @@ body{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para las tarjetas */
 }
 
+/* Botón de compra (INICAR SESIÓN PARA COMPRAR) */
 .contenedorbotoncomprar {
     width: 100%;
     display: flex;
     justify-content: center; /* Centra el botón horizontalmente */
-    position: absolute; /* Posiciona el contenedor del botón de manera absoluta dentro del contenedor principal */
-    bottom: 45px; /* Espacio desde el borde inferior del contenedor principal */
+    margin-top: 55px; /* Espacio encima del botón */
+    margin-bottom: 40px;
 }
 
 .botoncomprar {
@@ -325,14 +396,13 @@ body{
     font-size: 1rem; /* Tamaño del texto del botón */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     outline: none; /* Elimina el borde de enfoque por defecto */
-    transition: background-color 0.3s, border-color 0.3s; /* Transiciones para efectos de hover */
+    transition: background-color 0.3s, border-color 0.3s; /* Transiciones para color */
 }
 
 .botoncomprar:hover {
     background-color: #EB00FF; /* Fondo del botón al pasar el ratón */
     border-color: black; /* Borde del botón al pasar el ratón */
 }
-
 
 .contenedorPreguntas {
     width: 100%;
@@ -398,6 +468,12 @@ body{
     border-radius: 10px; /* Bordes redondeados del botón */
     padding: 10px 20px; /* Espacio interno del botón */
     font-size: 1.1rem; /* Tamaño del texto del botón */
+    cursor: pointer; /* Cambia el colr al pasar el cursor sobre el botón */
+    outline: none; /* Elimina el borde de enfoque por defecto */
+    transition: background-color 0.3s, border-color 0.3s; /* Transiciones para color*/
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     outline: none; /* Elimina el borde de enfoque por defecto */
     transition: background-color 0.3s, border-color 0.3s; /* Transiciones para efectos de hover */
@@ -437,5 +513,3 @@ body{
         margin-top: 20px; /* Añade espacio superior */
     }
 }
-
-
