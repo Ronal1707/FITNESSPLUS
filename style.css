@@ -72,7 +72,6 @@ body{
 }
 
 
-/* Asegura que cada slide ocupe el alto completo del slider */
 .carousel-item {
     height: 100%; /* Alto de la imagen*/
 }
