@@ -71,15 +71,6 @@ body{
     background-color: black;
 }
 
-/* CONTENEDOR SECCION PROBLEMA Y SOLUCION - SLIDER PEQUEÑO */
-.ContenedorSLpeq-problema {
-    background-color: black;
-    padding: 20px;
-    width: 100%;
-    min-height: 400px; /* Altura mínima para que se ajuste mejor a diferentes tamaños de pantalla */
-    margin-top: 0;
-    position: relative;
-}
 
 .left-text-box {
     color: white;
