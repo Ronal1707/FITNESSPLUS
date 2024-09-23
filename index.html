@@ -143,18 +143,47 @@
     </div>
 </div>
 
-
   <div class = "contenedorPreguntas" >
         <h2 class = "tituloPreguntas">¿TIENES ALGUNA PREGUNTA?</h2>
-    <div class="desplegable">
-      <label for="preguntas_frec"></label>
-      <select name="Preguntas" id="preguntas_frec">
-        <option value="ubicaciones">¿Donde los puedo ubicar?</option>
-        <option value="Cobros">¿Tienen cobros adicionales?</option>
-        <option value="Horarios">¿En que horarios puedo entrenar?</option>
-      </select>
+        <!-- Menú desplegable -->
+        <select id="dropdownMenu">
+            <option value="">SELECCIONA UNA OPCIÓN</option>
+            <option value="popup1">¿DONDE LOS PUEDO UBICAR?</option>
+            <option value="popup2">¿TIENEN COBROS ADICIONALES?</option>
+            <option value="popup3">¿EN QUE ORARIOS PUEDO ENTRENAR?</option>
+        </select>
+
+        <!-- Contenedor del popup 1 -->
+        <div id="popup1" class="popup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <h2>PUEDES IR A CUALQUIERA DE NUESTRAS SEDES A NIVEL NACIONAL</h2>
+                <a href="#" class="botoncomprar">NUESTRAS SEDES</a>
+            </div>
+        </div>
+
+        <!-- Contenedor del popup 2 -->
+        <div id="popup2" class="popup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <h2>NO, TODOS NUESTROS COSTOS SON FIJOS
+                    PUEDES CONSULTAR LOS PRECIOS AQUÍ</h2>
+                <a href="#" class="botoncomprar">CONSULTAR PLANES</a>
+            </div>
+        </div>
+
+        <!-- Contenedor del popup 3 -->
+        <div id="popup3" class="popup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <h2>PUEDES ENCONTRAR LOS HORARIOS DISPONIBLES EN LA
+                    PAGINA DEDICADA A CLASES</h2>
+                <a href="#" class="botoncomprar">HORARIOS</a>
+            </div>
+        </div>
+        <script src="script_2.js"></script>
     </div>
-  </div>
+
   <div class="footer">
     <section class="opciones-footer">
         <div class="footer-opcion">
