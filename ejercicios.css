@@ -1,0 +1,21 @@
+.Contenedorejerciciosvar {
+    background-color: black;
+    padding: 20px; /* Espacio interno del contenedor */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    width: 100%; /* Ocupa el ancho total */
+    min-height: 750px; /* Altura mínima */
+    height: 750px; /* Altura del rectángulo negro */
+    width: 100%;
+    position: relative;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+}
+
+.tituloejercicios {
+    color: white; /* Color del título */
+    text-align: center; /* Centra el título horizontalmente */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    font-size: 5rem; /* Tamaño del texto */
+}
