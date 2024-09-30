@@ -96,29 +96,28 @@
             <div class="col-lg-6 col-md-12 d-flex align-items-center">
                 <div class="left-text-box">
                     <h2>¡Bienvenido a FITNESPLUSS!</h2>
-                    <p>Aquí puedes agregar el contenido o descripción que desees. Por ejemplo, hablar sobre los
-                        beneficios de inscribirse, los entrenadores, etc.</p>
+                    <p>Aquí puedes agregar el contenido o descripción que desees. Por ejemplo, hablar sobre los beneficios de inscribirse, los entrenadores, etc.</p>
                 </div>
             </div>
 
-        <!-- Slider pequeño -->
-        <div id="right-slider" class="carousel slide right-slider" data-bs-ride="carousel"
-                data-bs-interval="5000">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="imagenes/slider%201.jpg" class="d-block" alt="First Slide">
-                </div>
-                <div class="carousel-item">
-                    <img src="imagenes/slider%202.jpg" class="d-block" alt="Second Slide">
-                </div>
-                <div class="carousel-item">
-                    <img src="imagenes/slider%203.jpg" class="d-block" alt="Third Slide">
+            <!-- Slider pequeño -->
+            <div id="right-slider" class="col-lg-6 col-md-12 carousel slide right-slider" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="imagenes/slider%201.jpg" class="d-block w-100" alt="First Slide">
                     </div>
+                    <div class="carousel-item">
+                        <img src="imagenes/slider%202.jpg" class="d-block w-100" alt="Second Slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imagenes/slider%203.jpg" class="d-block w-100" alt="Third Slide">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
- 
+
     <!-- Contenedor Blanco Iconos y Beneficios -->
     <div class="ContenedorBeneficios">
         <div class="ContainerImagBeneficios">
@@ -140,7 +139,7 @@
 
     <!-- Contenedor Negro Seccion Planes -->
     <div class="ContenedorPlanes">
-        <h2 class="titulo">PLANES</h2>
+        <h2 class="tituloPlanes">PLANES</h2>
         <div class="tarjetas-container">
             <div class="tarjetas">
                 <div class="tarjeta">Tarjeta 1</div>
@@ -154,46 +153,20 @@
     </div>
 
 
-  <div class = "contenedorPreguntas" >
-        <h2 class = "tituloPreguntas">¿TIENES ALGUNA PREGUNTA?</h2>
-        <!-- Menú desplegable -->
-        <select id="dropdownMenu">
-            <option value="">SELECCIONA UNA OPCIÓN</option>
-            <option value="popup1">¿DONDE LOS PUEDO UBICAR?</option>
-            <option value="popup2">¿TIENEN COBROS ADICIONALES?</option>
-            <option value="popup3">¿EN QUE ORARIOS PUEDO ENTRENAR?</option>
-        </select>
+    <!-- DESPLEGABLE PREGUNTAS -->
 
-        <!-- Contenedor del popup 1 -->
-        <div id="popup1" class="popup">
-            <div class="popup-content">
-                <span class="close">&times;</span>
-                <h2>PUEDES IR A CUALQUIERA DE NUESTRAS SEDES A NIVEL NACIONAL</h2>
-                <a href="#" class="botoncomprar">NUESTRAS SEDES</a>
-            </div>
+    <div class="contenedorPreguntas">
+        <h2 class="tituloPreguntas">¿TIENES ALGUNA PREGUNTA?</h2>
+        <div class="desplegable">
+            <label for="preguntas_frec"></label>
+            <select name="Preguntas" id="preguntas_frec">
+                <option value="ubicaciones">¿Donde los puedo ubicar?</option>
+                <option value="Cobros">¿Tienen cobros adicionales?</option>
+                <option value="Horarios">¿En que horarios puedo entrenar?</option>
+            </select>
         </div>
-
-        <!-- Contenedor del popup 2 -->
-        <div id="popup2" class="popup">
-            <div class="popup-content">
-                <span class="close">&times;</span>
-                <h2>NO, TODOS NUESTROS COSTOS SON FIJOS
-                    PUEDES CONSULTAR LOS PRECIOS AQUÍ</h2>
-                <a href="#" class="botoncomprar">CONSULTAR PLANES</a>
-            </div>
-        </div>
-
-        <!-- Contenedor del popup 3 -->
-        <div id="popup3" class="popup">
-            <div class="popup-content">
-                <span class="close">&times;</span>
-                <h2>PUEDES ENCONTRAR LOS HORARIOS DISPONIBLES EN LA
-                    PAGINA DEDICADA A CLASES</h2>
-                <a href="#" class="botoncomprar">HORARIOS</a>
-            </div>
-        </div>
-        <script src="script_2.js"></script>
     </div>
+
 
   <div class="footer">
     <section class="opciones-footer">
@@ -219,8 +192,8 @@
             </ul>
         </div>
     </section>
-  </div>
-
+     </div>
+    </div>
     <!-- Bootstrap 5 JS and Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
