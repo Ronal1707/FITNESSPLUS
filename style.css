@@ -1162,31 +1162,30 @@ body, html {
 
 
 /* Estilos para pantallas pequeñas */
+
+    /* Consulta de medios para pantallas pequeñas */
 @media (max-width: 768px) {
     .ContenedorPlanes {
         height: auto; /* Ajusta la altura para pantallas pequeñas */
         padding: 20px; /* Aumenta el padding para pantallas pequeñas */
     }
-
-    /* Consulta de medios para pantallas pequeñas */
-    @media (max-width: 768px) {
-        .tarjetas-container {
-            display: flex;
-            flex-direction: column; /* Cambia la dirección a columna para apilar las tarjetas verticalmente */
-            align-items: center; /* Centra el contenedor de tarjetas horizontalmente */
-            justify-content: center; /* Centra el contenedor de tarjetas verticalmente */
-            height: 100%; /* Asegura que el contenedor de tarjetas ocupe el 100% de la altura disponible */
-            gap: 20px; /* Espacio entre las tarjetas */
-        }
-
-        .tarjetas {
-            display: flex;
-            flex-direction: column; /* Apila las tarjetas verticalmente */
-            align-items: center; /* Centra las tarjetas horizontalmente dentro de su contenedor */
-            gap: 20px; /* Espacio entre las tarjetas */
-        }
+    
+    .tarjetas-container {
+        display: flex;
+        flex-direction: column; /* Cambia la dirección a columna para apilar las tarjetas verticalmente */
+        align-items: center; /* Centra el contenedor de tarjetas horizontalmente */
+        justify-content: center; /* Centra el contenedor de tarjetas verticalmente */
+        height: 100%; /* Asegura que el contenedor de tarjetas ocupe el 100% de la altura disponible */
+        gap: 20px; /* Espacio entre las tarjetas */
     }
-
+    
+    .tarjetas {
+        display: flex;
+        flex-direction: column; /* Apila las tarjetas verticalmente */
+        align-items: center; /* Centra las tarjetas horizontalmente dentro de su contenedor */
+        gap: 20px; /* Espacio entre las tarjetas */
+    }
+    
 
     .contenedorbotoncomprar {
         position: static; /* Elimina la posición absoluta en pantallas pequeñas */
