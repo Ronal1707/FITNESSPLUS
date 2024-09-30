@@ -1,4 +1,8 @@
-﻿.header-sin-cuenta {
+﻿html {
+    scroll-behavior: smooth; /* Desplazamiento suave */
+}
+
+.header-sin-cuenta {
     background-color: white;
     position: fixed;
     top: 0;
@@ -281,8 +285,10 @@
 .tituloPlanes {
     color: black; /* Color del título */
     text-align: center; /* Centra el título horizontalmente */
-    margin-bottom: 20px; /* Espacio debajo del título */
-    font-size: 5rem; /* Tamaño del texto */
+    margin-top: 50px;
+    margin-bottom: 70px; /* Espacio debajo del título */
+    font-size: 6rem; /* Tamaño del texto */
+    font-weight: bold;
 }
 
 /* Contenedor de tarjetas PLANES */
@@ -291,28 +297,85 @@
     flex-wrap: wrap; /* Permite que las tarjetas se ajusten en pantallas más pequeñas */
     justify-content: center; /* Centra las tarjetas horizontalmente */
     gap: 20px; /* Espacio entre las tarjetas */
-    margin-bottom: 40px; /* Espacio debajo del contenedor de tarjetas */
+    margin-bottom: 100px; /* Espacio debajo del contenedor de tarjetas */
 }
 
 /* Tarjetas PLANES*/
 .tarjetas {
     display: flex;
     flex-wrap: wrap; /* Permite que las tarjetas se ajusten en pantallas más pequeñas */
-    gap: 40px; /* Espacio entre las tarjetas */
+    gap: 200px; /* Espacio entre las tarjetas */
     justify-content: center; /* Centra las tarjetas horizontalmente */
 }
 
 .tarjeta {
     background-color: white;
     color: black;
-    width: 300px; /* Ancho de cada tarjeta */
-    height: 490px; /* Alto de cada tarjeta */
-    border-radius: 15px; /* Bordes redondeados de las tarjetas */
+    width: 355px; /* Ancho de cada tarjeta */
+    height: auto; /* Cambia a auto para permitir que la tarjeta crezca según su contenido */
+    border-radius: 35px; /* Bordes redondeados de las tarjetas */
     display: flex;
-    align-items: center;
-    justify-content: center; /* Centra el contenido dentro de la tarjeta */
+    flex-direction: column; /* Apila los elementos de forma vertical */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: flex-start; /* Alinea los elementos en la parte superior */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para las tarjetas */
     border: 3px solid #EB00FF; /* Borde de color azul y grosor de 2px */
+    padding: 20px; /* Espacio interno para evitar que el contenido toque los bordes */
+}
+
+
+
+
+
+/* Títulos de las tarjetas */
+.tarjeta-titulo {
+    font-size: 2.5rem; /* Tamaño del texto para el título */
+    margin-top: 10px;
+    margin-bottom: 1px; /* Espacio debajo del título */
+    text-align: center; /* Centra el título en la tarjeta */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Días de la semana */
+.dias-semana {
+    font-size: 1.4rem; /* Tamaño del texto para los días de la semana */
+    margin: 30px; /* Espacio arriba y abajo del texto */
+    text-align: center; /* Centra el texto en la tarjeta */
+    font-family: 'Poppins', sans-serif;
+}
+
+.dias-semana p {
+    margin: 15px; /* Espacio entre cada día; ajusta el valor según necesites */
+}
+
+/* Estilo para el contenedor del botón */
+.contenedorbotoncomprar {
+    display: flex;
+    justify-content: center; /* Centra el botón horizontalmente */
+    margin-top: 10px; /* Espacio encima del botón */
+    margin-bottom: 30px; /* Espacio debajo del botón */
+
+}
+
+/* Estilo para el botón */
+.botoncomprar {
+    background-color: white; /* Fondo del botón */
+    color: black; /* Color de la fuente del botón */
+    border: 3px solid #EB00FF; /* Borde del botón */
+    border-radius: 10px; /* Bordes redondeados del botón */
+    padding: 10px 20px; /* Espacio interno del botón */
+    font-size: 1.2rem; /* Tamaño del texto del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    outline: none; /* Elimina el borde de enfoque por defecto */
+    transition: background-color 0.3s, border-color 0.3s; /* Transiciones para color */
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.botoncomprar:hover {
+    background-color: #EB00FF; /* Fondo del botón al pasar el ratón */
+    border-color: black; /* Borde del botón al pasar el ratón */
 }
 
 
@@ -386,3 +449,37 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
 }
+
+/* Para pantallas entre 768px y 992px */
+@media (min-width: 768px) and (max-width: 992px) {
+    .header-sin-cuenta {
+        padding: 15px; /* Ajusta el padding si es necesario */
+    }
+
+    .imagen-logo-header {
+        padding-right: 15%; /* Espacio intermedio */
+        padding-left: 5%; /* Espacio intermedio */
+    }
+
+    .tarjetaEj {
+        width: 80%; /* Ajusta el ancho */
+    }
+
+    .tituloPlanes {
+        font-size: 4rem; /* Ajusta el tamaño del título */
+    }
+
+    .tarjeta {
+        width: 45%; /* Dos tarjetas en la misma fila */
+        height: auto; /* Ajuste automático de altura */
+    }
+
+    .footer {
+        flex-direction: row; /* Mantiene la dirección en fila */
+    }
+
+    .footer-opcion {
+        width: 20%; /* Mantiene el ancho en proporción */
+    }
+}
+
