@@ -398,77 +398,114 @@ body {
     /*CONTENEDOR TARJETAS PLANES*/
     .ContenedorPlanes {
         background-color: black;
-        padding: 20px; /* Espacio interno del contenedor */
-        box-sizing: border-box; /* Incluye el padding en el ancho total */
-        width: 100%; /* Ocupa el ancho total */
-        min-height: 750px; /* Altura mínima */
-        height: 750px; /* Altura del rectángulo negro */
+        padding: 20px;
+        /* Espacio interno del contenedor */
+        box-sizing: border-box;
+        /* Incluye el padding en el ancho total */
+        width: 100%;
+        /* Ocupa el ancho total */
+        min-height: 750px;
+        /* Altura mínima */
+        height: 750px;
+        /* Altura del rectángulo negro */
         width: 100%;
         position: relative;
-        box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+        padding: 10px;
+        /* Espacio interno del contenedor */
+        box-sizing: border-box;
+        /* Asegura que el padding no afecte el tamaño total */
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centra el contenido horizontalmente */
+        align-items: center;
+        /* Centra el contenido horizontalmente */
     }
 
     /* Título PLANES */
     .tituloPlanes {
-        color: #EB00FF; /* Color del título */
-        text-align: center; /* Centra el título horizontalmente */
-        margin-bottom: 20px; /* Espacio debajo del título */
-        font-size: 5rem; /* Tamaño del texto */
+        color: #EB00FF;
+        /* Color del título */
+        text-align: center;
+        /* Centra el título horizontalmente */
+        margin-bottom: 20px;
+        /* Espacio debajo del título */
+        font-size: 5rem;
+        /* Tamaño del texto */
     }
 
     /* Contenedor de tarjetas PLANES */
     .tarjetas-container {
         display: flex;
-        flex-wrap: wrap; /* Permite que las tarjetas se ajusten en pantallas más pequeñas */
-        justify-content: center; /* Centra las tarjetas horizontalmente */
-        gap: 20px; /* Espacio entre las tarjetas */
-        margin-bottom: 40px; /* Espacio debajo del contenedor de tarjetas */
-        justify-content: center; /* Centra el contenedor de tarjetas horizontalmente */
+        flex-wrap: wrap;
+        /* Permite que las tarjetas se ajusten en pantallas más pequeñas */
+        justify-content: center;
+        /* Centra las tarjetas horizontalmente */
+        gap: 20px;
+        /* Espacio entre las tarjetas */
+        margin-bottom: 40px;
+        /* Espacio debajo del contenedor de tarjetas */
+        justify-content: center;
+        /* Centra el contenedor de tarjetas horizontalmente */
         width: 100%;
     }
 
     /* Tarjetas PLANES*/
     .tarjetas {
         display: flex;
-        flex-wrap: wrap; /* Permite que las tarjetas se ajusten en pantallas más pequeñas */
-        gap: 40px; /* Espacio entre las tarjetas */
-        justify-content: center; /* Centra las tarjetas horizontalmente */
+        flex-wrap: wrap;
+        /* Permite que las tarjetas se ajusten en pantallas más pequeñas */
+        gap: 40px;
+        /* Espacio entre las tarjetas */
+        justify-content: center;
+        /* Centra las tarjetas horizontalmente */
     }
 
     .tarjeta {
         background-color: white;
         color: black;
-        width: 300px; /* Ancho de cada tarjeta */
-        height: 490px; /* Alto de cada tarjeta */
-        border-radius: 15px; /* Bordes redondeados de las tarjetas */
+        width: 300px;
+        /* Ancho de cada tarjeta */
+        height: 490px;
+        /* Alto de cada tarjeta */
+        border-radius: 15px;
+        /* Bordes redondeados de las tarjetas */
         display: flex;
         align-items: center;
-        justify-content: center; /* Centra el contenido dentro de la tarjeta */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para las tarjetas */
+        justify-content: center;
+        /* Centra el contenido dentro de la tarjeta */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        /* Sombra para las tarjetas */
     }
 
     /* Botón de compra (INICAR SESIÓN PARA COMPRAR) */
     .contenedorbotoncomprar {
         width: 100%;
         display: flex;
-        justify-content: center; /* Centra el botón horizontalmente */
-        margin-top: 55px; /* Espacio encima del botón */
+        justify-content: center;
+        /* Centra el botón horizontalmente */
+        margin-top: 55px;
+        /* Espacio encima del botón */
         margin-bottom: 40px;
     }
 
     .botoncomprar {
-        background-color: black; /* Fondo del botón */
-        color: white; /* Color de la fuente del botón */
-        border: 2px solid #EB00FF; /* Borde del botón */
-        border-radius: 10px; /* Bordes redondeados del botón */
-        padding: 10px 20px; /* Espacio interno del botón */
-        font-size: 1rem; /* Tamaño del texto del botón */
-        cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-        outline: none; /* Elimina el borde de enfoque por defecto */
-        transition: background-color 0.3s, border-color 0.3s; /* Transiciones para color */
+        background-color: black;
+        /* Fondo del botón */
+        color: white;
+        /* Color de la fuente del botón */
+        border: 2px solid #EB00FF;
+        /* Borde del botón */
+        border-radius: 10px;
+        /* Bordes redondeados del botón */
+        padding: 10px 20px;
+        /* Espacio interno del botón */
+        font-size: 1rem;
+        /* Tamaño del texto del botón */
+        cursor: pointer;
+        /* Cambia el cursor al pasar sobre el botón */
+        outline: none;
+        /* Elimina el borde de enfoque por defecto */
+        transition: background-color 0.3s, border-color 0.3s;
+        /* Transiciones para color */
     }
 
     .botoncomprar:hover {
