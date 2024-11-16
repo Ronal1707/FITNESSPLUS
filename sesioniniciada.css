@@ -271,7 +271,6 @@
 }
 
 
-
 /*CONTENEDOR TARJETAS PLANES*/
 .ContenedorPlanes {
     background-color: white;
@@ -304,7 +303,7 @@
 .tarjetas {
     display: flex;
     flex-wrap: wrap; /* Permite que las tarjetas se ajusten en pantallas más pequeñas */
-    gap: 200px; /* Espacio entre las tarjetas */
+    gap: 100px; /* Espacio entre las tarjetas */
     justify-content: center; /* Centra las tarjetas horizontalmente */
 }
 
@@ -322,9 +321,6 @@
     border: 3px solid #EB00FF; /* Borde de color azul y grosor de 2px */
     padding: 20px; /* Espacio interno para evitar que el contenido toque los bordes */
 }
-
-
-
 
 
 /* Títulos de las tarjetas */
@@ -403,14 +399,14 @@
     text-align: center;
 }
 
-.footer{
+.footer {
     display: flex;
     background-color: #110010;
     width: 100%;
     height: 280px;
 }
 
-.opciones-footer{
+.opciones-footer {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -429,7 +425,7 @@
     padding-left: 0;
 }
 
-.lista-enlaces  {
+.lista-enlaces {
     display: flex;
     flex-direction: column;
     padding-left: 0;
