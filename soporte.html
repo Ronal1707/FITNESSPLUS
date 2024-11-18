@@ -9,33 +9,39 @@
 </head>
 <body>
     <section class="contenedor-titulo">
-        <h2>SOPORTE</h2>
+        <h2 class="soporte-titulo">SOPORTE</h2>
         <div class="container-subtitle">
-            <h3>GENERA UN TICKET CON TU PROBLEMA</h3>
+            <h3 class="soporte-subtitulo">GENERA UN TICKET CON TU PROBLEMA</h3>
         </div>    
     </section>
     <section class="formulario">
         <div class="gallery">
-            <img src="img/imagen1.png" class="fade" alt="Imagen 1">
-            <img src="img/imagen2.png" class="fade" alt="Imagen 2">
-            <img src="img/imagen3.png" class="fade" alt="Imagen 3">
-            <img src="img/imagen4.png" class="fade" alt="Imagen 3">
+            <img src="imagenes/slider 1.jpg" class="fade" alt="Imagen 1">
+            <img src="imagenes/slider 2.jpg" class="fade" alt="Imagen 2">
+            <img src="imagenes/slider 3.jpg" class="fade" alt="Imagen 3">
+            <img src="imagenes/slider 4.jpg" class="fade" alt="Imagen 3">
         </div>
         <script src="script.js"></script>
         <div class="contenedor-form">
             <div class="content-input">
                 <div class="input">
                     <label class="label_from" for="nombre">CORREO ELECTRÓNICO</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Santiago Gomez" required>
+                    <input type="text" id="nombre" name="nombre" placeholder="hola@gmail.com" required>
                 </div>
                 <div class="input">
-                    <label class="label_from" for="correo">CUÉNTANOS TU PROBLEMA</label>
-                    <input type="text" id="correo" name="correo" placeholder="hola@gmail.com" required>
+                    <label class="label_from" id="input-correo" for="correo">CUÉNTANOS TU PROBLEMA</label>
+                    <input type="text" id="correo" name="correo" placeholder="Describe tu inquietud" required>
                 </div>
             </div>
+            <script src="script_2.js".js"></script>
             <div class="botones-cuenta">
-                <button class="botoncomprar" id="cuenta">ENVIAR TICKET</button>
+                <button class="botoncomprar" id="ticket" onclick="mostrarPopup()">ENVIAR TICKET</button>
                 <a class="botoncomprar" id="volver" href="index.html">VOLVER</a>
+            </div>
+
+            <div id="popup-ticket" class="popup-ticket">
+                <p>¡Ya resibimos tu mensaje, Enviaremos la respuesta a tu correo lo mas pronto posible!</p>
+                <button class="close-btn" onclick="cerrarPopup()">Cerrar</button>
             </div>
         </div>   
     </section>

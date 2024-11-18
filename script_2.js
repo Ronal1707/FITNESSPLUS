@@ -42,3 +42,13 @@ window.onclick = function(event) {
         }
     }
 }
+
+// Función para mostrar el popup
+function mostrarPopup() {
+    document.getElementById('popup-ticket').style.display = 'block';
+}
+
+// Función para cerrar el popup
+function cerrarPopup() {
+    document.getElementById('popup-ticket').style.display = 'none';
+}
