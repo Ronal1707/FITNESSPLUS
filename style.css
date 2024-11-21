@@ -76,36 +76,31 @@ body{
 /* Rectángulo negro */
 /* Contenedor negro que contiene texto y un slider pequeño */
 .ContenedorSLpeq-problema {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: black;
-    padding: 10px;
+    padding: 20px;
     width: 100%;
-    height: 90vh; /* Ajuste con unidades relativas para que responda mejor */
+    min-height: 400px; /* Altura mínima para que se ajuste mejor a diferentes tamaños de pantalla */
     margin-top: 0;
     position: relative;
-    flex-wrap: wrap; /* Para que el contenido se acomode en pantallas pequeñas */
 }
 
 /* Caja de texto a la izquierda */
 .left-text-box {
     color: white;
-    width: 45%;
-    text-align: justify;
-    font-size: 1.5vw; /* Ajuste del tamaño del texto */
-    margin-left: 2vw;
+    font-size: 1.2rem;
     font-family: 'Poppins', sans-serif;
+    padding-right: 20px; /* Añade un padding a la derecha para separación con el slider */
+    text-align: justify;
 }
 
 /* Slider pequeño a la derecha */
 .right-slider {
-    width: 40vw; /* Ajuste del ancho relativo al viewport */
-    height: 40vw; /* Ajuste del alto relativo */
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    margin: 20px 0; /* Espaciado para pantallas más pequeñas */
+    border-radius: 20px; /* Redondea las esquinas del slider */
+    overflow: hidden; /* Asegura que las imágenes se ajusten dentro del contenedor redondeado */
+}
+
+.carousel-item {
+    height: 100%; /* Alto de la imagen*/
 }
 
 /* Las imágenes dentro del slider se ajustarán */
@@ -147,13 +142,6 @@ body{
 }
 
 
-
-
-/*revision de display responsive ESTA BIEN POR AHORA*/
-
-
-
-
 .carousel-item {
     height: 100%; /* Asegura que cada slide ocupe el alto */
 }
@@ -176,10 +164,6 @@ body{
 .carousel-inner {
     margin: 0;
 }
-
-
-
-
 
 
 
@@ -261,40 +245,35 @@ body{
 }
 
 
-
-/*revision display responsivo*/
-
-
-
 /* Nuevo rectángulo negro */
 .ContenedorPlanes {
     background-color: black;
-    height: 750px; /* Altura del rectángulo negro */
-    width: 100%;
-    position: relative;
-    padding: 10px; /* Espacio interno del contenedor */
-    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra el contenido horizontalmente */
+    padding: 20px; /* Espacio interno del contenedor */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    width: 100%; /* Ocupa el ancho total */
+    min-height: 750px; /* Altura mínima */
 }
 
-.titulo {
+.tituloPlanes {
     color: #EB00FF; /* Color del título */
     text-align: center; /* Centra el título horizontalmente */
     margin-bottom: 20px; /* Espacio debajo del título */
-    font-size: 80px;
+    font-size: 5rem; /* Tamaño del texto */
 }
 
 .tarjetas-container {
     display: flex;
-    justify-content: center; /* Centra el contenedor de tarjetas horizontalmente */
-    width: 100%;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en pantallas más pequeñas */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    gap: 20px; /* Espacio entre las tarjetas */
+    margin-bottom: 40px; /* Espacio debajo del contenedor de tarjetas */
 }
 
 .tarjetas {
     display: flex;
-    gap: 140px; /* Espacio fijo de 140 píxeles entre las tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en pantallas más pequeñas */
+    gap: 40px; /* Espacio entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
 }
 
 .tarjeta {
@@ -304,17 +283,72 @@ body{
     height: 490px; /* Alto de cada tarjeta */
     border-radius: 15px; /* Bordes redondeados de las tarjetas */
     display: flex;
-    align-items: center;
-    justify-content: center; /* Centra el contenido dentro de la tarjeta */
+    flex-direction: column; /* Organiza el contenido en columnas (verticalmente) */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: space-evenly; /* Distribuye el contenido verticalmente con espacios iguales */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para las tarjetas */
+    padding: 20px; /* Espaciado interno para evitar que el contenido toque los bordes */
+    text-align: center; /* Alinea el texto en el centro */
+    box-sizing: border-box; /* Incluye padding en el tamaño total */
+    gap: 10px;
 }
 
+
+/* Título de la tarjeta */
+.tituloTarjeta {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+/* Mes */
+.mes {
+    color: #EB00FF;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Descripción */
+.descripcion {
+    font-size: 1.2rem;
+    margin-bottom: 38px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+/* Detalle adicional */
+.detalle {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Botón de comparar */
+.comparar {
+    color: #EB00FF;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.comparar:hover {
+    text-decoration: underline;
+}
+
+/* Precio */
+.precio {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+
 .contenedorbotoncomprar {
-    width: 100%;
     display: flex;
     justify-content: center; /* Centra el botón horizontalmente */
-    position: absolute; /* Posiciona el contenedor del botón de manera absoluta dentro del contenedor principal */
-    bottom: 45px; /* Espacio desde el borde inferior del contenedor principal */
+    margin-top: 55px; /* Espacio encima del botón */
+    margin-bottom: 40px;
 }
 
 .botoncomprar {
@@ -333,6 +367,8 @@ body{
     background-color: #EB00FF; /* Fondo del botón al pasar el ratón */
     border-color: black; /* Borde del botón al pasar el ratón */
 }
+
+
 
 
 .contenedorPreguntas {
@@ -667,8 +703,6 @@ body, html {
         height: 480px;
     }
 }
-=======
-body {
     background-color: black;
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -1285,7 +1319,7 @@ body{
     margin: 0;
 
     font-family: 'Poppins', sans-serif;
-    padding-right: 20px; /* Añade un padding a la derecha para separación con el slider */
+    
     text-align: justify;
 }
 
@@ -1739,11 +1773,141 @@ body, html {
     background-color: black;
 }
 
-.tarjetaperfil {
+.cardprofile{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que las cajas se ajusten a nuevas filas */
+    justify-content: center;
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid #EB00FF; /* Ajusté la sintaxis de border-color */
+    width: 450px;
+    height: fit-content;
+    margin: 1%;
+    padding: 1%;
+    text-align: left; /* Por defecto, el texto estará alineado a la izquierda */
+}
+
+/* Ajuste responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .cardprofile {
+        flex-direction: column; /* Cambia el diseño a columnas */
+        text-align: center; /* Centra el texto debajo de la imagen */
+        width: 90%; /* Ocupa el 90% del ancho de la pantalla */
+        margin: auto; /* Centra horizontalmente en la pantalla */
+    }
+}
+.fotoperfil{
+    width: 200px;
+    height: 200px; /* Asegúrate de que el contenedor sea cuadrado */
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #0011A6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 5%;
+}
+
+.fotoperfil img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0%;
+}
+
+.infousuario{
+    align-items: center; 
+    justify-content: center;
+}
+
+/* Modal */
+.modal {
+    display: flex; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que las cajas se ajusten a nuevas filas */
+    justify-content: center;
+    text-align: left;
+  }
+  
+  /* Contenido del modal */
+  .modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; /* Ajusta el ancho según lo necesites */
+    max-width: 500px; /* Limita el ancho máximo */
+    position: relative;
+  }
+  
+  /* Botón de cierre */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #aaa;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: black;
+  }
+  
+  /* Estilo de formulario */
+  form label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+  }
+  
+  form button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  form button[type="submit"] {
+    background-color: #8000ff;
+    color: white;
+  }
+  
+  form button#cancelButton {
+    background-color: #ccc;
+    color: black;
+  }
+.Rutinas{
+    display: flex;
+    background-color: black;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que las cajas se ajusten a nuevas filas */
+    justify-content: center;
+}
+.tarjetarutina {
     background-color: white;
     color: black;
-    width: 490px; /* Ancho de cada tarjeta */
-    height: 250px; /* Alto de cada tarjeta */
+    width: 600px; /* Ancho de cada tarjeta */
+    height: 300px; /* Alto de cada tarjeta */
     border-radius: 30px; /* Bordes redondeados de las tarjetas */
     display: flex;
     align-items: center;
@@ -1752,31 +1916,43 @@ body, html {
     margin: 2%;
 }
 
-.fotoperfil{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 4px solid #0011A6;
-    display: flex;
-    justify-content: center;
+.rutinainfo{
+    background-color: black;
+    color: black;
+    width: 90%; /* Ancho de cada tarjeta */
+    height: 90%; /* Alto de cada tarjeta */
+    border-radius: 30px; /* Bordes redondeados de las tarjetas */
     align-items: center;
-    cursor: pointer;
-    margin-left: 5%;
-}
-
-.fotoperfil img{
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-    display: block;
-    margin: 0%;
-}
-
-.infoperfil{
+    justify-content: center; /* Centra el contenido dentro de la tarjeta */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para las tarjetas */
     margin: 2%;
-    margin-left: 10%;
-    font-weight: 100;
+    display: column;
+    padding: 2%;
+}
+
+.rutinainfo h2{
+    color: white;
+    align-items: center;
+    justify-content: center; 
+}
+
+.rutinainfo p{
+    color: white;
+    align-items: center;
+    justify-content: center; 
+}
+
+.rutinaoptions{
+    background-color: black;
+    color: black;
+    width: 10%; /* Ancho de cada tarjeta */
+    height: 90%; /* Alto de cada tarjeta */
+    border-radius: 30px; /* Bordes redondeados de las tarjetas */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido dentro de la tarjeta */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para las tarjetas */
+    margin: 2%;
 }
 
 .contenedorbotonMasEj {
@@ -1906,62 +2082,6 @@ body, html {
     box-shadow: 0px 0px 0px 7px rgba(79, 78, 105, 0.295);
 }
 
-.Rutinas{
-    display: flex;
-    background-color: black;
-    align-items: center;
-    justify-content: center;
-}
-.tarjetarutina {
-    background-color: white;
-    color: black;
-    width: 600px; /* Ancho de cada tarjeta */
-    height: 300px; /* Alto de cada tarjeta */
-    border-radius: 30px; /* Bordes redondeados de las tarjetas */
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centra el contenido dentro de la tarjeta */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para las tarjetas */
-    margin: 2%;
-}
-
-.rutinainfo{
-    background-color: black;
-    color: black;
-    width: 90%; /* Ancho de cada tarjeta */
-    height: 90%; /* Alto de cada tarjeta */
-    border-radius: 30px; /* Bordes redondeados de las tarjetas */
-    align-items: center;
-    justify-content: center; /* Centra el contenido dentro de la tarjeta */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para las tarjetas */
-    margin: 2%;
-    display: column;
-}
-
-.rutinainfo h2{
-    color: white;
-    align-items: center;
-    justify-content: center; 
-}
-
-.rutinainfo p{
-    color: white;
-    align-items: center;
-    justify-content: center; 
-}
-
-.rutinaoptions{
-    background-color: black;
-    color: black;
-    width: 10%; /* Ancho de cada tarjeta */
-    height: 90%; /* Alto de cada tarjeta */
-    border-radius: 30px; /* Bordes redondeados de las tarjetas */
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centra el contenido dentro de la tarjeta */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para las tarjetas */
-    margin: 2%;
-}
 
 /* Estilos para pantallas pequeñas */
 

@@ -16,10 +16,11 @@
 </head>
 
 <body>
+    
     <header class="header-sin-cuenta">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a href="#" class="imagen-logo-header">
+                <a href="index.html" class="imagen-logo-header">
                     <img src="imagenes/LOGO HEADER.png" alt="logo FITNESPLUSS">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -29,7 +30,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">PLANES</a>
+                            <a class="nav-link active" aria-current="page" href="#contenedorplanes">PLANES</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="iniciar_sesion.html">INICIAR SESION</a>
@@ -51,7 +52,7 @@
             <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="5000">
+            <div class="carousel-item active" data-bs-interval="8000">
                 <img src="imagenes/slider 4.jpg" class="d-block w-100" alt="First slide">
                 <div class="overlay-slider">
                     <div class="carousel-caption ">
@@ -135,21 +136,41 @@
         </div>
     </div>
 
-
+    
     <!-- Contenedor Negro Seccion Planes -->
-    <div class="ContenedorPlanes">
+    <div id="contenedorplanes" class="ContenedorPlanes">
         <h2 class="tituloPlanes">PLANES</h2>
         <div class="tarjetas-container">
-            <div class="tarjetas">
-                <div class="tarjeta">Tarjeta 1</div>
-                <div class="tarjeta">Tarjeta 2</div>
-                <div class="tarjeta">Tarjeta 3</div>
+            <div class="tarjeta">
+                <h3 class="tituloTarjeta">PLUS</h3>
+                <p class="mes">1 MES</p>
+                <p class="descripcion">Perfecto para quienes están empezando en el fitness.</p>
+                <p class="detalle">Ofrece una introducción básica con un enfoque personalizado.</p>
+                <a href="#" class="comparar">COMPARAR</a>
+                <p class="precio">$19.900</p>
+            </div>
+            <div class="tarjeta">
+                <h3 class="tituloTarjeta">PRO</h3>
+                <p class="mes">1 MES</p>
+                <p class="descripcion">Ideal para los que buscan más personalización.</p>
+                <p class="detalle">Aumenta la flexibilidad de tus entrenamientos.</p>
+                <a href="#" class="comparar">COMPARAR</a>
+                <p class="precio">$49.900</p>
+            </div>
+            <div class="tarjeta">
+                <h3 class="tituloTarjeta">INFINITY</h3>
+                <p class="mes">1 MES</p>
+                <p class="descripcion">La mejor opción para una experiencia única.</p>
+                <p class="detalle">Dale seguimiento a cada entrenamiento.</p>
+                <a href="#" class="comparar">COMPARAR</a>
+                <p class="precio">$99.900</p>
             </div>
         </div>
         <div class="contenedorbotoncomprar">
-            <button class="botoncomprar">INICIAR SESION PARA COMPRAR</button>
+            <button class="botoncomprar" onclick="window.location.href='iniciar_sesion.html';">INICIAR SESIÓN PARA COMPRAR</button>
         </div>
     </div>
+
 
 
     <!-- DESPLEGABLE PREGUNTAS -->
