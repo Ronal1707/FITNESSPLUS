@@ -579,6 +579,35 @@
     box-shadow: 0px 0px 0px 7px rgba(79, 78, 105, 0.295);
 }
 
+
+.contenedorbotoncomprar {
+    display: flex;
+    justify-content: center; /* Centra el botón horizontalmente */
+    margin-top: 10px; /* Espacio encima del botón */
+    margin-bottom: 10px;
+    margin-left: 1350px;
+}
+
+.botoncomprar {
+    background-color: #EB00FF; /* Fondo del botón */
+    color: black; /* Color de la fuente del botón */
+    border: 2px solid #EB00FF; /* Borde del botón */
+    font-weight: bolder;
+    border-radius: 10px; /* Bordes redondeados del botón */
+    padding: 10px 10px; /* Espacio interno del botón */
+    font-size: 1rem; /* Tamaño del texto del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    outline: none; /* Elimina el borde de enfoque por defecto */
+    transition: background-color 0.3s, border-color 0.3s; /* Transiciones para color */
+}
+
+.botoncomprar:hover {
+    background-color: black; /* Fondo del botón al pasar el ratón */
+    border-color: white; /* Borde del botón al pasar el ratón */
+    color: white;
+}
+
+
 /* Footer */
 .footer {
     display: flex;
