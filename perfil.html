@@ -13,6 +13,44 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <title>PERFIL</title>
+
+    <style>
+
+        /* Estilo del fondo oscurecido (overlay) */
+        #overlay1 {
+            display: none; /* Oculto por defecto */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
+            justify-content: center;
+            align-items: center;
+            z-index: 1; /* Sobre el contenido */
+        }
+
+        /* Estilo del modal */
+        #modal1 {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Estilo del botón de cerrar */
+        #cerrarModal1 {
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,14 +68,18 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
+                        <a class="nav-link" href="sesioniniciada.html"> INICIO</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="ejercicios.html">EJERCICIOS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">CLASES</a>
+                        <a class="nav-link" href="#clases">CLASES</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="perfil.html">PERFIL</a>
                     </li>
+
                 </ul>
             </div>
         </div>
@@ -130,39 +172,106 @@
         <div class="tarjetarutina">
             <div class="rutinainfo">
                 <h2>RUTINA 1</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum
-                    vestibulum. Cras venenatis euismod malesuada. Nullam ac urna eu felis dapibus condimentum sit amet a
-                    augue.
+                <p>Debes configurar tu rutina para poder ver el contenido
                 </p>
             </div>
             <div class="rutinaoptions">
-
+                <button class="boton" title="Editar">✏️</button>
+                <button class="boton" title="Borrar">🗑️</button>
+                <button class="boton" title="Ver">👁️</button>
             </div>
 
         </div>
         <div class="tarjetarutina">
             <div class="rutinainfo">
-                <h2>RUTINA 1</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum
-                    vestibulum. Cras venenatis euismod malesuada. Nullam ac urna eu felis dapibus condimentum sit amet a
-                    augue.
+                <h2>RUTINA 2</h2>
+                <p>Debes configurar tu rutina para poder ver el contenido
                 </p>
             </div>
             <div class="rutinaoptions">
-                <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white
-                    {
-                        
-                    }"
-                        class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                        <path
-                            d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
-                    </svg>
-                    
-                </button>
+                <button class="boton" title="Editar">✏️</button>
+                <button class="boton" title="Borrar">🗑️</button>
+                <button class="boton" title="Ver">👁️</button>
             </div>
 
         </div>
+
+        <div class="ContenedorPlanes" id="clases">
+            <h2 class="tituloPlanes">CLASES</h2>
+            <div class="tarjetas-container">
+                <div class="tarjetas" id="botonReserva1">
+                    <div class="tarjeta">
+                        <h3 class="tarjeta-titulo">SPINNING</h3>
+                        <div class="dias-semana">
+                            <p>Lunes: 8 - 10 AM</p>
+                            <p>Martes: 8 - 10 AM</p>
+                            <p>Miércoles: 8 - 10 AM</p>
+                            <p>Jueves: 8 - 10 AM</p>
+                            <p>Viernes: 8 - 10 AM</p>
+                            <p>Sábado: 8 - 10 AM</p>
+                            <p>Domingo: 8 - 10 AM</p>
+                        </div>
+                        <div class="contenedorbotoncomprar">
+                            <button class="botoncomprar" >RESERVAR</button>
+                        </div>
+                    </div>
+                    <div class="tarjeta">
+                        <h3 class="tarjeta-titulo">CALISTENIA</h3>
+                        <div class="dias-semana">
+                            <p>Lunes: 1 - 3 PM</p>
+                            <p>Martes: 1 - 3 PM</p>
+                            <p>Miércoles: 1 - 3 PM</p>
+                            <p>Jueves: 1 - 3 PM</p>
+                            <p>Viernes: 1 - 3 PM</p>
+                            <p>Sábado: 1 - 3 PM</p>
+                            <p>Domingo: 1 - 3 PM</p>
+                        </div>
+                        <div class="contenedorbotoncomprar">
+                            <button class="botoncomprar" >RESERVAR</button>
+                        </div>
+                    </div>
+                    <div class="tarjeta">
+                        <h3 class="tarjeta-titulo">PILATES</h3>
+                        <div class="dias-semana">
+                            <p>Lunes: 5 - 7 PM</p>
+                            <p>Martes: 5 - 7 PM</p>
+                            <p>Miércoles: 5 - 7 PM</p>
+                            <p>Jueves: 5 - 7 PM</p>
+                            <p>Viernes: 5 - 7 PM</p>
+                            <p>Sábado: 5 - 7 PM</p>
+                            <p>Domingo: 5 - 7 PM</p>
+                        </div>
+                        <div class="contenedorbotoncomprar">
+                            <button class="botoncomprar" >RESERVAR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="overlay1">
+            <div id="modal1">
+                <p>Lo sentimos, en este momento no es posible reservar. Inténtalo de nuevo más tarde.</p>
+                <button id="cerrarModal1">Cerrar</button>
+            </div>
+        </div>
+
+        <script>
+            // Obtener los elementos
+            const botonReserva1 = document.getElementById('botonReserva1');
+            const overlay1 = document.getElementById('overlay1');
+            const cerrarModal1 = document.getElementById('cerrarModal1');
+    
+            // Mostrar el modal al hacer clic en el botón
+            botonReserva1.addEventListener('click', function() {
+                overlay1.style.display = 'flex';
+            });
+    
+            // Cerrar el modal al hacer clic en el botón de cerrar
+            cerrarModal1.addEventListener('click', function() {
+                overlay1.style.display = 'none';
+            });
+        </script>
 
     </section>
 
