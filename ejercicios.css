@@ -20,48 +20,72 @@
     font-weight: 700; /* Para hacer bold */
 }
 
-.Contenedorejerciciosvar {
-    background-color: black;
-    margin-top: 3%;
-    padding: 20px; /* Espacio interno del contenedor */
-    box-sizing: border-box; /* Incluye el padding en el ancho total */
-    width: 100%; /* Ocupa el ancho total */
-    min-height: 750px; /* Altura mínima */
-    height: 2500px; /* Altura del rectángulo negro */
-    width: 100%;
-    position: relative;
-    gap: 20px;
-    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra el contenido horizontalmente */
-}
-
 .tituloejercicios {
-    color: white; /* Color del título */
+    color: rgb(231, 13, 13); /* Color del título */
     text-align: center; /* Centra el título horizontalmente */
     margin-bottom: 20px; /* Espacio debajo del título */
-    font-size: 5rem; /* Tamaño del texto */
+    font-size: 3rem; /* Tamaño del texto */
 }
+
+/* SECCION EJERCICIOS */
+.ContenedorEjercicios {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+
 
 
 .tarjetaEj {
-    transition: all 0.5s ease-in-out;
     display: flex;
     background-color: white;
     color: black;
-    width: 1100px;
-    height: 210px;
+    width: 90%; /* Ocupa todo el ancho del contenedor */
+    height: auto; /* Ajuste automático de altura */
     border-radius: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     padding: 15px;
     box-sizing: border-box;
+    flex-direction: row; /* Por defecto, contenido en fila */
 }
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .tarjetaEj {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center; /* Centra la imagen y el texto */
+        text-align: center; /* Centra el texto */
+    }
 
+    .tarjeta-imagen {
+        width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+        height: auto; /* Altura automática */
+        border-radius: 20px 20px 0 0; /* Bordes redondeados solo arriba */
+    }
+
+    .tarjeta-contenido {
+        padding: 15px; /* Espaciado interno */
+        width: 100%; /* Ancho completo */
+    }
+
+    .tarjeta-contenido h2 {
+        font-size: 1em; /* Ajusta el tamaño del texto */
+    }
+
+    .extra-info p {
+        font-size: 1em; /* Ajusta el tamaño del párrafo */
+    }
+}
 .tarjeta-imagen {
-    width: 60%;
+    width: 100%;
     height: auto;
+    max-height: 300px;
     object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -72,7 +96,7 @@
     flex-direction: column;
     justify-content: center;
     padding-left: 20px;
-    width: 60%;
+    width: auto;
 }
 
 .tarjeta-contenido h2 {
@@ -92,7 +116,6 @@
     max-height: 150px; /* Ajusta este valor según cuánto espacio necesite el texto extra */
     opacity: 1;
 }
-
 
 .cta {
     border: none;
@@ -289,7 +312,7 @@
 
 .footer-opcion {
     width: 20%;
-    margin: 1rem;
+
     text-align: left;
 }
 
@@ -303,102 +326,6 @@
     padding-left: 0;
 }
 
-/* Estilos Generales */
-
-/* Header */
-.header-sin-cuenta {
-    background-color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* Asegura que quede por encima de otros elementos */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra si quieres */
-}
-
-.imagen-logo-header {
-    padding-right: 30%;
-    padding-left: 2%;
-}
-
-.boton-header {
-    color: black;
-    padding-right: 10px;
-    padding-left: 10px;
-    font-weight: 700; /* Para hacer bold */
-}
-
-/* Contenedor de Ejercicios */
-.Contenedorejerciciosvar {
-    background-color: black;
-    margin-top: 3%;
-    padding: 20px; /* Espacio interno del contenedor */
-    box-sizing: border-box; /* Incluye el padding en el ancho total */
-    width: 100%; /* Ocupa el ancho total */
-    min-height: 750px; /* Altura mínima */
-    height: 2500px; /* Altura del rectángulo negro */
-    position: relative;
-    gap: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra el contenido horizontalmente */
-}
-
-.tituloejercicios {
-    color: white; /* Color del título */
-    text-align: center; /* Centra el título horizontalmente */
-    margin-bottom: 20px; /* Espacio debajo del título */
-    font-size: 5rem; /* Tamaño del texto */
-}
-
-/* Tarjetas */
-.tarjetaEj {
-    transition: all 0.5s ease-in-out;
-    display: flex;
-    background-color: white;
-    color: black;
-    width: 1100px;
-    height: 210px;
-    border-radius: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    padding: 15px;
-    box-sizing: border-box;
-}
-
-.tarjeta-imagen {
-    width: 60%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.tarjeta-contenido {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 20px;
-    width: 60%;
-}
-
-.tarjeta-contenido h2 {
-    font-size: 3em;
-    margin: 0;
-    font-weight: bold;
-}
-
-.extra-info {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    opacity: 0;
-}
-
-.tarjetaEj.expandida .extra-info {
-    max-height: 150px; /* Ajusta este valor según cuánto espacio necesite el texto extra */
-    opacity: 1;
-}
 
 /* Botón CTA */
 .cta {
@@ -583,9 +510,7 @@
 .contenedorbotoncomprar {
     display: flex;
     justify-content: center; /* Centra el botón horizontalmente */
-    margin-top: 10px; /* Espacio encima del botón */
-    margin-bottom: 10px;
-    margin-left: 1350px;
+    margin: 20px; /* Espacio encima del botón */
 }
 
 .botoncomprar {
@@ -639,156 +564,4 @@
     display: flex;
     flex-direction: column;
     padding-left: 0;
-}
-
-/* Media Queries */
-
-/* Media Query para pantallas menores a 768px */
-@media (max-width: 768px) {
-    /* Ajustes para el Header */
-    .header-sin-cuenta {
-        position: static; /* Cambia a estático para evitar problemas con el navbar */
-        box-shadow: none; /* Elimina la sombra para simplificar el diseño */
-        padding: 10px 0; /* Reduce el padding */
-    }
-
-    .imagen-logo-header {
-        padding-right: 0; /* Elimina el padding derecho */
-        padding-left: 10px; /* Añade un pequeño padding izquierdo */
-    }
-
-    .navbar-nav {
-        flex-direction: column; /* Coloca los elementos de la navbar en columna */
-        align-items: center; /* Centra los elementos */
-    }
-
-    .nav-link {
-        padding: 10px 0; /* Reduce el padding de los enlaces */
-        text-align: center; /* Centra el texto */
-    }
-
-    /* Ajustes para la Sección de Planes */
-    .ContenedorPlanes {
-        padding: 10px; /* Reduce el padding interno */
-        min-height: auto; /* Elimina la altura mínima */
-    }
-
-    .tituloPlanes {
-        font-size: 1rem; /* Reduce el tamaño del título */
-        margin-bottom: 15px; /* Ajusta el margen inferior */
-    }
-
-    .tarjetas-container {
-        flex-direction: column; /* Apila las tarjetas verticalmente */
-        gap: 15px; /* Reduce el espacio entre tarjetas */
-    }
-
-    .tarjetaEj {
-        width: 100%; /* Tarjetas ocupan el ancho completo */
-        flex-direction: column; /* Apila el contenido verticalmente */
-        height: 250px; /* Altura automática según el contenido */
-        padding: 10px; /* Reduce el padding */
-    }
-
-    .tarjeta-imagen {
-        width: 100%; /* Imagen ocupa el ancho completo */
-        height: auto; /* Altura automática */
-        border-radius: 10px; /* Bordes más redondeados */
-        margin-bottom: 10px; /* Espacio debajo de la imagen */
-    }
-
-    .tarjeta-contenido {
-        width: 100%; /* Contenido ocupa el ancho completo */
-        padding-left: 0; /* Elimina el padding izquierdo */
-        align-items: center; /* Centra el contenido */
-        text-align: center; /* Centra el texto */
-    }
-
-    .tarjeta-contenido h2 {
-        font-size: 2rem; /* Reduce el tamaño del título dentro de la tarjeta */
-        margin-bottom: 10px; /* Ajusta el margen inferior */
-    }
-
-    .contenedorbotoncomprar {
-        margin-top: 20px; /* Reduce el margen superior */
-        margin-bottom: 20px; /* Reduce el margen inferior */
-    }
-
-    .botoncomprar {
-        padding: 8px 16px; /* Reduce el padding del botón */
-        font-size: 0.9rem; /* Reduce el tamaño de la fuente */
-    }
-
-    /* Footer Ajustes */
-    .footer {
-        flex-direction: column; /* Apila las opciones del footer verticalmente */
-        height: auto; /* Altura automática */
-        padding: 20px 0; /* Añade padding vertical */
-    }
-
-    .footer-opcion {
-        width: 100%; /* Cada opción ocupa el ancho completo */
-        text-align: center; /* Centra el texto */
-        margin: 10px 0; /* Añade margen vertical */
-    }
-}
-
-/* Media Query para pantallas entre 768px y 992px */
-@media (min-width: 768px) and (max-width: 992px) {
-    /* Ajustes para el Header */
-    .imagen-logo-header {
-        padding-right: 15%; /* Reduce el padding derecho */
-        padding-left: 5%; /* Ajusta el padding izquierdo */
-    }
-
-    .tituloPlanes {
-        font-size: 4rem; /* Ajusta el tamaño del título */
-        margin-bottom: 20px; /* Mantiene el margen inferior */
-    }
-
-    .tarjetas-container {
-        flex-direction: row; /* Mantiene las tarjetas en fila */
-        flex-wrap: wrap; /* Permite que las tarjetas se ajusten */
-        gap: 20px; /* Mantiene el espacio entre tarjetas */
-    }
-
-    .tarjetaEj {
-        width: 80%; /* Ajusta el ancho de las tarjetas */
-        flex-direction: row; /* Mantiene el contenido en fila */
-        height: auto; /* Altura automática */
-        padding: 15px; /* Mantiene el padding */
-    }
-
-    .tarjeta-imagen {
-        width: 50%; /* Reduce el ancho de la imagen */
-        margin-bottom: 0; /* Elimina el margen inferior */
-    }
-
-    .tarjeta-contenido {
-        width: 50%; /* Reduce el ancho del contenido */
-        padding-left: 10px; /* Ajusta el padding izquierdo */
-        text-align: left; /* Alinea el texto a la izquierda */
-    }
-
-    .tarjeta-contenido h2 {
-        font-size: 2.5rem; /* Reduce el tamaño del título */
-        margin-bottom: 15px; /* Ajusta el margen inferior */
-    }
-
-    .contenedorbotoncomprar {
-        margin-top: 25px; /* Ajusta el margen superior */
-        margin-bottom: 25px; /* Ajusta el margen inferior */
-    }
-
-    .botoncomprar {
-        padding: 9px 18px; /* Ajusta el padding del botón */
-        font-size: 1rem; /* Mantiene el tamaño de la fuente */
-    }
-
-    /* Footer Ajustes */
-    .footer-opcion {
-        width: 30%; /* Ajusta el ancho de las opciones del footer */
-        text-align: left; /* Alinea el texto a la izquierda */
-        margin: 1rem; /* Mantiene el margen */
-    }
 }
